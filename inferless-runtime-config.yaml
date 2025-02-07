@@ -6,3 +6,5 @@ build:
     - decord==0.6.0
     - vllm==0.7.2
     - git+https://github.com/huggingface/transformers.git@014047e1c8784c00e2a04cb04ffcecdd5cb23c16
+    - inferless==0.2.6
+    - pydantic==2.10.2
