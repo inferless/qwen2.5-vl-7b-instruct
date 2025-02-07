@@ -3,7 +3,7 @@
 
 ## TL;DR:
 - Deployment of Qwen2-VL-7B-Instruct model using [vllm](https://github.com/vllm-project/vllm).
-- You can expect an average latency of `5.83 seconds` for image and	`21.61 seconds` for video with generating max tokens of `256`. This setup has an average cold start time of `38.17 seconds`.
+- You can expect an average latency of `5.4 seconds` for image and	`22.25` for video with generating max tokens of `256`. This setup has an average cold start time of `38.17 seconds`.
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
