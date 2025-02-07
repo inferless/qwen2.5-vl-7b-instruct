@@ -1,4 +1,4 @@
-# Tutorial - Deploy Qwen2-VL-7B-Instruct using Inferless
+# Tutorial - Deploy Qwen2.5-VL-7B-Instruct using Inferless
 [Qwen2-VL-7B-Instruct](https://huggingface.co/qwen/Qwen2-VL-7B-Instruct) is a state-of-the-art multimodal language model developed by Alibaba Cloud’s Qwen team. This model is part of the Qwen2 series and is tailored for instruction-based tasks, excelling in visual understanding and multilingual processing. It features a dense transformer architecture with 7 billion parameters, enabling it to handle complex multimodal inputs effectively. The model incorporates Naive Dynamic Resolution for processing images of arbitrary resolutions and Multimodal Rotary Position Embedding (M-ROPE) to capture 1D textual, 2D visual, and 3D video positional information, enhancing its performance across various tasks.
 
 ## TL;DR:
