@@ -2,4 +2,6 @@ build:
   cuda_version: "12.1.1"
   python_packages:
     - qwen-vl-utils==0.0.8
-    - vllm==0.6.4.post1
+    - decord==0.6.0
+    - vllm==0.7.2
+    - transformers==4.49.0.dev0
