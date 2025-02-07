@@ -19,7 +19,7 @@ class InferlessPythonModel:
         max_tokens = int(inputs.get("max_tokens",256))
         max_pixels = int(inputs.get("max_pixels",12845056))
         max_duration = int(inputs.get("max_duration",5))
-        fps = int(inputs.get("max_duration",1))
+        fps = int(inputs.get("fps",1))
 
         sampling_params = SamplingParams(temperature=temperature,top_p=top_p,repetition_penalty=repetition_penalty,
                                          top_k=top_k,max_tokens=max_tokens)
