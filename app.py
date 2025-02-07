@@ -18,7 +18,8 @@ class InferlessPythonModel:
         top_k = int(inputs.get("top_k",40))
         max_tokens = int(inputs.get("max_tokens",256))
         max_pixels = int(inputs.get("max_pixels",12845056))
-        max_duration = int(inputs.get("max_duration",60))
+        max_duration = int(inputs.get("max_duration",5))
+        fps = int(inputs.get("max_duration",1))
 
         sampling_params = SamplingParams(temperature=temperature,top_p=top_p,repetition_penalty=repetition_penalty,
                                          top_k=top_k,max_tokens=max_tokens)
@@ -32,8 +33,10 @@ class InferlessPythonModel:
             content = {
                 "type": "video",
                 "video": content_url,
-                "max_duration": max_duration
-            }  
+                "max_duration": max_duration,
+                "max_pixels": max_pixels,
+                "fps": fps
+            }
         
         messages = [
             {"role": "system", "content": system_prompt},
@@ -44,8 +47,8 @@ class InferlessPythonModel:
         ]
 
         prompt = self.processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        image_inputs, video_inputs = process_vision_info(messages)
-
+        image_inputs, video_inputs,video_kwargs = process_vision_info(messages,return_video_kwargs=True)
+        
         mm_data = {}
         if image_inputs is not None:
             mm_data["image"] = image_inputs
@@ -55,6 +58,7 @@ class InferlessPythonModel:
         llm_inputs = {
             "prompt": prompt,
             "multi_modal_data": mm_data,
+            "mm_processor_kwargs": video_kwargs,
         }
         
         outputs = self.llm.generate([llm_inputs], sampling_params=sampling_params)
