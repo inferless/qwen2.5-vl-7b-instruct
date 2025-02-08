@@ -64,5 +64,11 @@ INPUT_SCHEMA = {
         'required': False,
         'shape': [1],
         'example': [60]
+    },
+    "fps":{
+        'datatype': 'INT64',
+        'required': False,
+        'shape': [1],
+        'example': [1]
     }
 }
