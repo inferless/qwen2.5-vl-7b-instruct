@@ -1,9 +1,9 @@
-# Tutorial - Deploy Qwen2-VL-7B-Instruct using Inferless
-[Qwen2-VL-7B-Instruct](https://huggingface.co/qwen/Qwen2-VL-7B-Instruct) is a state-of-the-art multimodal language model developed by Alibaba Cloud’s Qwen team. This model is part of the Qwen2 series and is tailored for instruction-based tasks, excelling in visual understanding and multilingual processing. It features a dense transformer architecture with 7 billion parameters, enabling it to handle complex multimodal inputs effectively. The model incorporates Naive Dynamic Resolution for processing images of arbitrary resolutions and Multimodal Rotary Position Embedding (M-ROPE) to capture 1D textual, 2D visual, and 3D video positional information, enhancing its performance across various tasks.
+# Tutorial - Deploy Qwen2.5-VL-7B-Instruct using Inferless
+[Qwen2.5-VL-7B-Instruct](https://huggingface.co/qwen/Qwen2.5-VL-7B-Instruct) is a state-of-the-art multimodal language model developed by Alibaba Cloud’s Qwen team. This model is part of the Qwen2 series and is tailored for instruction-based tasks, excelling in visual understanding and multilingual processing. It features a dense transformer architecture with 7 billion parameters, enabling it to handle complex multimodal inputs effectively. The model incorporates Naive Dynamic Resolution for processing images of arbitrary resolutions and Multimodal Rotary Position Embedding (M-ROPE) to capture 1D textual, 2D visual, and 3D video positional information, enhancing its performance across various tasks.
 
 ## TL;DR:
-- Deployment of Qwen2-VL-7B-Instruct model using [vllm](https://github.com/vllm-project/vllm).
-- You can expect an average latency of `5.83 seconds` for image and	`21.61 seconds` for video with generating max tokens of `256`. This setup has an average cold start time of `38.17 seconds`.
+- Deployment of Qwen2.5-VL-7B-Instruct model using [vllm](https://github.com/vllm-project/vllm).
+- You can expect an average latency of `5.4 seconds` for image and	`22.25` for video with generating max tokens of `256`. This setup has an average cold start time of `88.44 seconds`.
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
