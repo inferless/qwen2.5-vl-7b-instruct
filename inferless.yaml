@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Qwen2.5-VL-7B-Instruct
+name: qwen2.5-vl-7b-instruct
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -40,6 +40,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Qwen2.5-VL-7B-Instruct.git
+model_url: https://github.com/inferless/qwen2.5-vl-7b-instruct.git
 provider: GITHUB
 io_schema: true
