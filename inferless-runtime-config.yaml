@@ -8,3 +8,5 @@ build:
     - git+https://github.com/huggingface/transformers.git@014047e1c8784c00e2a04cb04ffcecdd5cb23c16
     - inferless==0.2.6
     - pydantic==2.10.2
+    - hf-transfer==0.1.9
+    - huggingface-hub==0.27.1
