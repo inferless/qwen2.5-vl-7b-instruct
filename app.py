@@ -25,11 +25,11 @@ class ResponseObjects(BaseModel):
     generated_result: str = Field(default="Test output")
 
 class InferlessPythonModel:
-  def initialize(self):
+    def initialize(self):
         self.llm = LLM(model="Qwen/Qwen2.5-VL-7B-Instruct")
         self.processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
-      
-  def infer(self, request: RequestObjects) -> ResponseObjects:
+    
+    def infer(self, request: RequestObjects) -> ResponseObjects:
         sampling_params = SamplingParams(temperature=request.temperature,top_p=request.top_p,repetition_penalty=request.repetition_penalty,
                                          top_k=request.top_k,max_tokens=request.max_tokens)
         if request.content_type == "image":
@@ -74,6 +74,6 @@ class InferlessPythonModel:
         generateObject = ResponseObjects(generated_result = generated_text)
         
         return generateObject
-
-  def finalize(self):
-    self.llm = None
+        
+    def finalize(self):
+        self.llm = None
