@@ -1,10 +1,8 @@
-# Tutorial - Deploy Qwen2-VL-7B-Instruct using Inferless
-[Qwen2.5-VL-7B-Instruct](https://huggingface.co/qwen/Qwen2.5-VL-7B-Instruct) is an advanced multimodal language model developed by Alibaba Cloud's Qwen team, building upon the capabilities of its predecessor, Qwen2-VL-7B-Instruct. This model is designed for instruction-based tasks, demonstrating enhanced proficiency in visual understanding and multilingual processing. With a dense transformer architecture comprising 7 billion parameters, it effectively manages complex multimodal inputs.
-
-Key improvements include the ability to analyze texts, charts, icons, graphics, and layouts within images, as well as understanding long videos and capturing events by pinpointing relevant segments. The model also features advanced object localization, capable of generating bounding boxes or points and providing structured outputs for scanned documents, forms, and tables, benefiting applications in finance and commerce. These advancements make Qwen2.5-VL-7B-Instruct a powerful tool for a wide range of multimodal tasks.
+# Tutorial - Deploy Qwen2.5-VL-7B-Instruct using Inferless
+[Qwen2.5-VL-7B-Instruct](https://huggingface.co/qwen/Qwen2.5-VL-7B-Instruct) is a state‑of‑the‑art, 7B vision‑language model from Alibaba Cloud’s Qwen team. Built for instruction‑tuned applications, it seamlessly fuses robust language understanding with advanced visual analysis. Whether it’s recognizing complex scenes, parsing detailed documents, or even comprehending long videos by pinpointing key moments, this model is engineered to act as a versatile visual agent. With capabilities that include generating structured outputs (like bounding boxes and JSON) and supporting multilingual text within images, it opens up new possibilities for interactive chatbots, multimedia content analysis, and more.
 
 ## TL;DR:
-- Deployment of Qwen2-VL-7B-Instruct model using [vllm](https://github.com/vllm-project/vllm).
+- Deployment of Qwen2.5-VL-7B-Instruct model using [vllm](https://github.com/vllm-project/vllm).
 - You can expect an average latency of `5.4 seconds` for image and	`22.25` for video with generating max tokens of `256`. This setup has an average cold start time of `88.44 seconds`.
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
